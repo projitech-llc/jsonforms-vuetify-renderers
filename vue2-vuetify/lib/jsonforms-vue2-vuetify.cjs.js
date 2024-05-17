@@ -3701,7 +3701,7 @@ var __vue_render__$h = function __vue_render__() {
       "error-messages": _vm.control.errors,
       "indeterminate": _vm.control.data === undefined,
       "input-value": _vm.control.data,
-      "value": _vm.control.data
+      "value": _vm.control.data ? _vm.control.data : false
     },
     on: {
       "change": _vm.onChange,
@@ -5053,7 +5053,7 @@ var __vue_render__$d = function __vue_render__() {
       "isFocused": _vm.isFocused,
       "appliedOptions": _vm.appliedOptions
     }
-  }, 'control-wrapper', _vm.controlWrapper, false), [_vm._v("\n  " + _vm._s(JSON.stringify(_vm.control.data)) + "\n")]);
+  }, 'control-wrapper', _vm.controlWrapper, false));
 };
 var __vue_staticRenderFns__$d = [];
 var __vue_inject_styles__$d = undefined;
@@ -5852,7 +5852,7 @@ var __vue_render__$4 = function __vue_render__() {
             "id": _vm.control.id + '-input',
             "disabled": !_vm.control.enabled,
             "autofocus": _vm.appliedOptions.focus,
-            "placeholder": _vm.appliedOptions.placeholder,
+            "placeholder": "",
             "label": _vm.computedLabel,
             "hint": _vm.control.description,
             "persistent-hint": _vm.persistentHint(),

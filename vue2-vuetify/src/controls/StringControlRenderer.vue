@@ -11,9 +11,9 @@
     " :clearable="hover" :value="control.data" :items="suggestions" hide-no-data v-bind="vuetifyProps('v-combobox')"
         @input="onChange" @focus="isFocused = true" @blur="isFocused = false" />
       <v-text-field v-else v-disabled-icon-focus :id="control.id + '-input'" :class="styles.control.input"
-        :disabled="!control.enabled" :autofocus="appliedOptions.focus" :placeholder="appliedOptions.placeholder"
-        :label="computedLabel" :hint="control.description" :persistent-hint="persistentHint()"
-        :required="control.required" :error-messages="control.errors" :value="control.data" :maxlength="appliedOptions.restrict ? control.schema.maxLength : undefined
+        :disabled="!control.enabled" :autofocus="appliedOptions.focus" placeholder="" :label="computedLabel"
+        :hint="control.description" :persistent-hint="persistentHint()" :required="control.required"
+        :error-messages="control.errors" :value="control.data" :maxlength="appliedOptions.restrict ? control.schema.maxLength : undefined
     " :counter="control.schema.maxLength !== undefined
     ? control.schema.maxLength
     : undefined
