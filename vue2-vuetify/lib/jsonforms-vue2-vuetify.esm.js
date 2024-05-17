@@ -3662,7 +3662,15 @@ var __vue_render__$h = function __vue_render__() {
       "isFocused": _vm.isFocused,
       "appliedOptions": _vm.appliedOptions
     }
-  }, 'control-wrapper', _vm.controlWrapper, false));
+  }, 'control-wrapper', _vm.controlWrapper, false), [_c('v-text-field', _vm._b({
+    "class": _vm.styles.control.input,
+    attrs: {
+      "id": _vm.control.id + '-input',
+      "disabled": !_vm.control.enabled,
+      "label": _vm.computedLabel,
+      "value": _vm.control.data
+    }
+  }, 'v-text-field', _vm.vuetifyProps('v-text-field'), false))], 1);
 };
 var __vue_staticRenderFns__$h = [];
 var __vue_inject_styles__$h = undefined;
@@ -5003,7 +5011,15 @@ var __vue_render__$d = function __vue_render__() {
       "isFocused": _vm.isFocused,
       "appliedOptions": _vm.appliedOptions
     }
-  }, 'control-wrapper', _vm.controlWrapper, false));
+  }, 'control-wrapper', _vm.controlWrapper, false), [_c('v-text-field', _vm._b({
+    "class": _vm.styles.control.input,
+    attrs: {
+      "id": _vm.control.id + '-input',
+      "disabled": !_vm.control.enabled,
+      "label": _vm.computedLabel,
+      "value": _vm.control.data ? _vm.control.data.join(',') : ''
+    }
+  }, 'v-text-field', _vm.vuetifyProps('v-text-field'), false))], 1);
 };
 var __vue_staticRenderFns__$d = [];
 var __vue_inject_styles__$d = undefined;
@@ -5755,7 +5771,15 @@ var __vue_render__$4 = function __vue_render__() {
       "isFocused": _vm.isFocused,
       "appliedOptions": _vm.appliedOptions
     }
-  }, 'control-wrapper', _vm.controlWrapper, false));
+  }, 'control-wrapper', _vm.controlWrapper, false), [_c('v-text-field', _vm._b({
+    "class": _vm.styles.control.input,
+    attrs: {
+      "id": _vm.control.id + '-input',
+      "disabled": !_vm.control.enabled,
+      "label": _vm.computedLabel,
+      "value": _vm.control.data
+    }
+  }, 'v-text-field', _vm.vuetifyProps('v-text-field'), false))], 1);
 };
 var __vue_staticRenderFns__$4 = [];
 var __vue_inject_styles__$4 = undefined;
