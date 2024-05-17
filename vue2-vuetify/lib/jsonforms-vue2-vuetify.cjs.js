@@ -5049,7 +5049,7 @@ var __vue_render__$d = function __vue_render__() {
       "id": _vm.control.id + '-input',
       "disabled": !_vm.control.enabled,
       "label": _vm.computedLabel,
-      "value": _vm.control.data
+      "value": "control.data"
     }
   })], 1);
 };
@@ -5803,18 +5803,16 @@ var __vue_render__$4 = function __vue_render__() {
       "isFocused": _vm.isFocused,
       "appliedOptions": _vm.appliedOptions
     }
-  }, 'control-wrapper', _vm.controlWrapper, false), [_vm.control.data ? _c('v-text-field', {
+  }, 'control-wrapper', _vm.controlWrapper, false), [_c('v-text-field', {
     "class": _vm.styles.control.input,
     attrs: {
       "id": _vm.control.id + '-input',
       "disabled": !_vm.control.enabled,
       "label": _vm.computedLabel,
-      "value": _vm.control.data,
-      "placeholder": "NONE",
-      "persistent-hint": "NONE",
+      "value": _vm.control.data ? _vm.control.data : ' ',
       "required": false
     }
-  }) : _vm._e()], 1);
+  })], 1);
 };
 var __vue_staticRenderFns__$4 = [];
 var __vue_inject_styles__$4 = undefined;
