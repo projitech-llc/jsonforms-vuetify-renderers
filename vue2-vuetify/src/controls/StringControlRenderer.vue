@@ -1,11 +1,6 @@
 <template>
-  <control-wrapper
-    v-bind="controlWrapper"
-    :styles="styles"
-    :isFocused="isFocused"
-    :appliedOptions="appliedOptions"
-  >
-    <v-hover v-slot="{ hover }">
+  <control-wrapper v-bind="controlWrapper" :styles="styles" :isFocused="isFocused" :appliedOptions="appliedOptions">
+    <!-- <v-hover v-slot="{ hover }">
       <v-combobox
         v-if="suggestions !== undefined"
         v-disabled-icon-focus
@@ -64,7 +59,8 @@
         @focus="isFocused = true"
         @blur="isFocused = false"
       />
-    </v-hover>
+    </v-hover> -->
+    DOES THIS WORK?
   </control-wrapper>
 </template>
 
