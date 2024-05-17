@@ -3508,7 +3508,7 @@ var __vue_render__$j = function __vue_render__() {
     attrs: {
       "id": _vm.id
     }
-  }, [_vm._v("\n  TEST\n  "), _vm._t("default")], 2) : _vm._e();
+  }, [_vm._t("default")], 2) : _vm._e();
 };
 var __vue_staticRenderFns__$j = [];
 var __vue_inject_styles__$j = undefined;
@@ -5028,48 +5028,7 @@ var __vue_render__$d = function __vue_render__() {
       "isFocused": _vm.isFocused,
       "appliedOptions": _vm.appliedOptions
     }
-  }, 'control-wrapper', _vm.controlWrapper, false), [_c('v-hover', {
-    scopedSlots: _vm._u([{
-      key: "default",
-      fn: function fn(ref) {
-        var hover = ref.hover;
-        return [_c('v-select', _vm._b({
-          directives: [{
-            name: "disabled-icon-focus",
-            rawName: "v-disabled-icon-focus"
-          }],
-          "class": _vm.styles.control.input,
-          attrs: {
-            "id": _vm.control.id + '-input',
-            "disabled": !_vm.control.enabled,
-            "autofocus": _vm.appliedOptions.focus,
-            "placeholder": _vm.appliedOptions.placeholder,
-            "label": _vm.computedLabel,
-            "hint": _vm.control.description,
-            "persistent-hint": _vm.persistentHint(),
-            "required": _vm.control.required,
-            "error-messages": _vm.control.errors,
-            "clearable": hover,
-            "value": _vm.control.data,
-            "items": _vm.control.options,
-            "item-text": function itemText(item) {
-              return _vm.t(item.label, item.label);
-            },
-            "item-value": "value"
-          },
-          on: {
-            "change": _vm.onChange,
-            "focus": function focus($event) {
-              _vm.isFocused = true;
-            },
-            "blur": function blur($event) {
-              _vm.isFocused = false;
-            }
-          }
-        }, 'v-select', _vm.vuetifyProps('v-select'), false))];
-      }
-    }])
-  })], 1);
+  }, 'control-wrapper', _vm.controlWrapper, false), [_vm._v("\n  " + _vm._s(JSON.stringify(_vm.control.data)) + "\n")]);
 };
 var __vue_staticRenderFns__$d = [];
 var __vue_inject_styles__$d = undefined;
