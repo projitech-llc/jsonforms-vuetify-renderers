@@ -35,7 +35,7 @@ declare const _default: import("vue").DefineComponent<{
     };
 }, {}, {}, {
     tooltipMessages(): string[];
-}, {}, import("vue/types/v3-component-options").ComponentOptionsMixin, import("vue/types/v3-component-options").ComponentOptionsMixin, {}, string, Readonly<import("vue").ExtractPropTypes<{
+}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, Readonly<import("vue").ExtractPropTypes<{
     errors: {
         required: true;
         type: PropType<ErrorObject<string, Record<string, any>, unknown>[]>;

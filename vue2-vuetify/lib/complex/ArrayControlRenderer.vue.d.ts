@@ -78,7 +78,7 @@ declare const controlRenderer: import("vue").DefineComponent<{
     title(prop: string): string;
     resolveUiSchema(propName: string): ControlElement;
     controlWithoutLabel(scope: string): ControlElement;
-}, import("vue/types/v3-component-options").ComponentOptionsMixin, import("vue/types/v3-component-options").ComponentOptionsMixin, {}, string, Readonly<import("vue").ExtractPropTypes<{
+}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, Readonly<import("vue").ExtractPropTypes<{
     schema: {
         required: true;
         type: import("vue").PropType<JsonSchema>;

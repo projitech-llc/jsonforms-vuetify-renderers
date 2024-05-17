@@ -95,7 +95,7 @@ declare const controlRenderer: import("vue").DefineComponent<{
     removeItemsClick(toDelete: number[] | null): void;
     childErrors(index: number): ErrorObject[];
     translateLabel(labelType: I18nArrayLayoutKey, additionalContext?: Record<string, unknown> | undefined, transformMessage?: (message: string) => string): string;
-}, import("vue/types/v3-component-options").ComponentOptionsMixin, import("vue/types/v3-component-options").ComponentOptionsMixin, {}, string, Readonly<import("vue").ExtractPropTypes<{
+}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, Readonly<import("vue").ExtractPropTypes<{
     schema: {
         required: true;
         type: import("vue").PropType<JsonSchema>;

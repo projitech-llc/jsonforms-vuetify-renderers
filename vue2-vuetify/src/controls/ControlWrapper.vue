@@ -1,5 +1,6 @@
 <template>
   <div v-if="visible" :class="styles.control.root" :id="id">
+    TEST
     <slot></slot>
   </div>
 </template>

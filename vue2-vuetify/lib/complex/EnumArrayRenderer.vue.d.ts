@@ -63,7 +63,7 @@ declare const controlRenderer: import("vue").DefineComponent<{
     dataHasEnum(value: any): boolean;
     composePaths: (path1: string, path2: string) => string;
     toggle(value: any, add: boolean): void;
-}, import("vue/types/v3-component-options").ComponentOptionsMixin, import("vue/types/v3-component-options").ComponentOptionsMixin, {}, string, Readonly<import("vue").ExtractPropTypes<{
+}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, Readonly<import("vue").ExtractPropTypes<{
     schema: {
         required: true;
         type: import("vue").PropType<JsonSchema>;

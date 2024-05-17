@@ -47,35 +47,49 @@ var isArray__default = /*#__PURE__*/_interopDefaultLegacy(isArray);
 var every__default = /*#__PURE__*/_interopDefaultLegacy(every);
 var isString__default = /*#__PURE__*/_interopDefaultLegacy(isString);
 
-function ownKeys(object, enumerableOnly) {
-  var keys = Object.keys(object);
+function ownKeys(e, r) {
+  var t = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
-    var symbols = Object.getOwnPropertySymbols(object);
-    enumerableOnly && (symbols = symbols.filter(function (sym) {
-      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-    })), keys.push.apply(keys, symbols);
+    var o = Object.getOwnPropertySymbols(e);
+    r && (o = o.filter(function (r) {
+      return Object.getOwnPropertyDescriptor(e, r).enumerable;
+    })), t.push.apply(t, o);
   }
-  return keys;
+  return t;
 }
-function _objectSpread2(target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = null != arguments[i] ? arguments[i] : {};
-    i % 2 ? ownKeys(Object(source), !0).forEach(function (key) {
-      _defineProperty(target, key, source[key]);
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) {
-      Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+function _objectSpread2(e) {
+  for (var r = 1; r < arguments.length; r++) {
+    var t = null != arguments[r] ? arguments[r] : {};
+    r % 2 ? ownKeys(Object(t), !0).forEach(function (r) {
+      _defineProperty(e, r, t[r]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) {
+      Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
     });
   }
-  return target;
+  return e;
 }
-function _typeof(obj) {
+function _toPrimitive(t, r) {
+  if ("object" != typeof t || !t) return t;
+  var e = t[Symbol.toPrimitive];
+  if (void 0 !== e) {
+    var i = e.call(t, r || "default");
+    if ("object" != typeof i) return i;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r ? String : Number)(t);
+}
+function _toPropertyKey(t) {
+  var i = _toPrimitive(t, "string");
+  return "symbol" == typeof i ? i : i + "";
+}
+function _typeof(o) {
   "@babel/helpers - typeof";
 
-  return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
-    return typeof obj;
-  } : function (obj) {
-    return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-  }, _typeof(obj);
+  return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+    return typeof o;
+  } : function (o) {
+    return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+  }, _typeof(o);
 }
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
@@ -88,7 +102,7 @@ function _defineProperties(target, props) {
     descriptor.enumerable = descriptor.enumerable || false;
     descriptor.configurable = true;
     if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
+    Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor);
   }
 }
 function _createClass(Constructor, protoProps, staticProps) {
@@ -100,6 +114,7 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 function _defineProperty(obj, key, value) {
+  key = _toPropertyKey(key);
   if (key in obj) {
     Object.defineProperty(obj, key, {
       value: value,
@@ -823,17 +838,17 @@ var controlRenderer$r = vue.defineComponent({
     moveUpClick: function moveUpClick(event, toMove) {
       var _this$moveUp;
       event.stopPropagation();
-      (_this$moveUp = this.moveUp) === null || _this$moveUp === void 0 ? void 0 : _this$moveUp.call(this, this.control.path, toMove)();
+      (_this$moveUp = this.moveUp) === null || _this$moveUp === void 0 || _this$moveUp.call(this, this.control.path, toMove)();
     },
     moveDownClick: function moveDownClick(event, toMove) {
       var _this$moveDown;
       event.stopPropagation();
-      (_this$moveDown = this.moveDown) === null || _this$moveDown === void 0 ? void 0 : _this$moveDown.call(this, this.control.path, toMove)();
+      (_this$moveDown = this.moveDown) === null || _this$moveDown === void 0 || _this$moveDown.call(this, this.control.path, toMove)();
     },
     removeItemsClick: function removeItemsClick(event, toDelete) {
       var _this$removeItems;
       event.stopPropagation();
-      (_this$removeItems = this.removeItems) === null || _this$removeItems === void 0 ? void 0 : _this$removeItems.call(this, this.control.path, toDelete)();
+      (_this$removeItems = this.removeItems) === null || _this$removeItems === void 0 || _this$removeItems.call(this, this.control.path, toDelete)();
     },
     childErrors: function childErrors(index) {
       var _this = this;
@@ -1171,17 +1186,17 @@ var controlRenderer$q = vue.defineComponent({
     moveUpClick: function moveUpClick(event, toMove) {
       var _this$moveUp;
       event.stopPropagation();
-      (_this$moveUp = this.moveUp) === null || _this$moveUp === void 0 ? void 0 : _this$moveUp.call(this, this.control.path, toMove)();
+      (_this$moveUp = this.moveUp) === null || _this$moveUp === void 0 || _this$moveUp.call(this, this.control.path, toMove)();
     },
     moveDownClick: function moveDownClick(event, toMove) {
       var _this$moveDown;
       event.stopPropagation();
-      (_this$moveDown = this.moveDown) === null || _this$moveDown === void 0 ? void 0 : _this$moveDown.call(this, this.control.path, toMove)();
+      (_this$moveDown = this.moveDown) === null || _this$moveDown === void 0 || _this$moveDown.call(this, this.control.path, toMove)();
     },
     removeItemsClick: function removeItemsClick(toDelete) {
       if (toDelete !== null) {
         var _this$removeItems;
-        (_this$removeItems = this.removeItems) === null || _this$removeItems === void 0 ? void 0 : _this$removeItems.call(this, this.control.path, toDelete)();
+        (_this$removeItems = this.removeItems) === null || _this$removeItems === void 0 || _this$removeItems.call(this, this.control.path, toDelete)();
       }
     },
     childErrors: function childErrors(index) {
@@ -2707,17 +2722,17 @@ var controlRenderer$n = vue.defineComponent({
     moveUpClick: function moveUpClick(event, toMove) {
       var _this$moveUp;
       event.stopPropagation();
-      (_this$moveUp = this.moveUp) === null || _this$moveUp === void 0 ? void 0 : _this$moveUp.call(this, this.control.path, toMove)();
+      (_this$moveUp = this.moveUp) === null || _this$moveUp === void 0 || _this$moveUp.call(this, this.control.path, toMove)();
     },
     moveDownClick: function moveDownClick(event, toMove) {
       var _this$moveDown;
       event.stopPropagation();
-      (_this$moveDown = this.moveDown) === null || _this$moveDown === void 0 ? void 0 : _this$moveDown.call(this, this.control.path, toMove)();
+      (_this$moveDown = this.moveDown) === null || _this$moveDown === void 0 || _this$moveDown.call(this, this.control.path, toMove)();
     },
     removeItemsClick: function removeItemsClick(event, toDelete) {
       var _this$removeItems;
       event.stopPropagation();
-      (_this$removeItems = this.removeItems) === null || _this$removeItems === void 0 ? void 0 : _this$removeItems.call(this, this.control.path, toDelete)();
+      (_this$removeItems = this.removeItems) === null || _this$removeItems === void 0 || _this$removeItems.call(this, this.control.path, toDelete)();
     },
     getValidColumnProps: function getValidColumnProps(scopedSchema) {
       if (scopedSchema.type === 'object' && _typeof(scopedSchema.properties) === 'object') {
@@ -2728,8 +2743,8 @@ var controlRenderer$n = vue.defineComponent({
       return [''];
     },
     title: function title(prop) {
-      var _this$control$schema$, _this$control$schema$2, _this$control$schema$3;
-      return (_this$control$schema$ = (_this$control$schema$2 = this.control.schema.properties) === null || _this$control$schema$2 === void 0 ? void 0 : (_this$control$schema$3 = _this$control$schema$2[prop]) === null || _this$control$schema$3 === void 0 ? void 0 : _this$control$schema$3.title) !== null && _this$control$schema$ !== void 0 ? _this$control$schema$ : startCase__default["default"](prop);
+      var _this$control$schema$, _this$control$schema$2;
+      return (_this$control$schema$ = (_this$control$schema$2 = this.control.schema.properties) === null || _this$control$schema$2 === void 0 || (_this$control$schema$2 = _this$control$schema$2[prop]) === null || _this$control$schema$2 === void 0 ? void 0 : _this$control$schema$2.title) !== null && _this$control$schema$ !== void 0 ? _this$control$schema$ : startCase__default["default"](prop);
     },
     resolveUiSchema: function resolveUiSchema(propName) {
       return this.control.schema.properties ? this.controlWithoutLabel("#/properties/".concat(propName)) : this.controlWithoutLabel('#');
@@ -2958,7 +2973,7 @@ var controlRenderer$m = vue.defineComponent({
         this.addItem(this.control.path, value);
       } else {
         var _this$removeItem;
-        (_this$removeItem = this.removeItem) === null || _this$removeItem === void 0 ? void 0 : _this$removeItem.call(this, this.control.path, value);
+        (_this$removeItem = this.removeItem) === null || _this$removeItem === void 0 || _this$removeItem.call(this, this.control.path, value);
       }
     }
   }
@@ -3518,7 +3533,7 @@ var __vue_render__$j = function __vue_render__() {
     attrs: {
       "id": _vm.id
     }
-  }, [_vm._t("default")], 2) : _vm._e();
+  }, [_vm._v("\n  TEST\n  "), _vm._t("default")], 2) : _vm._e();
 };
 var __vue_staticRenderFns__$j = [];
 var __vue_inject_styles__$j = undefined;
@@ -5917,7 +5932,7 @@ var VueMaskPluginDirectiveCallback = function () {
   function VueMaskPluginDirectiveCallback() {
     _classCallCheck(this, VueMaskPluginDirectiveCallback);
   }
-  _createClass(VueMaskPluginDirectiveCallback, [{
+  return _createClass(VueMaskPluginDirectiveCallback, [{
     key: "directive",
     value: function directive(_id, definition) {
       this.mask = definition;
@@ -5929,7 +5944,6 @@ var VueMaskPluginDirectiveCallback = function () {
       return definition;
     }
   }]);
-  return VueMaskPluginDirectiveCallback;
 }();
 var VueMaskPluginFilterCallback = function () {
   function VueMaskPluginFilterCallback() {
@@ -5938,7 +5952,7 @@ var VueMaskPluginFilterCallback = function () {
       return input;
     };
   }
-  _createClass(VueMaskPluginFilterCallback, [{
+  return _createClass(VueMaskPluginFilterCallback, [{
     key: "directive",
     value: function directive(_id, definition) {
       return definition;
@@ -5950,7 +5964,6 @@ var VueMaskPluginFilterCallback = function () {
       return definition;
     }
   }]);
-  return VueMaskPluginFilterCallback;
 }();
 var DelegateDirective = _createClass(function DelegateDirective() {
   var _this = this;
@@ -5968,7 +5981,7 @@ var DelegateDirective = _createClass(function DelegateDirective() {
       _this.delegate = callback.mask;
       if ((_this$delegate = _this.delegate) !== null && _this$delegate !== void 0 && _this$delegate.bind) {
         var _this$delegate2;
-        (_this$delegate2 = _this.delegate) === null || _this$delegate2 === void 0 ? void 0 : _this$delegate2.bind(el, binding, vnode, oldVnode);
+        (_this$delegate2 = _this.delegate) === null || _this$delegate2 === void 0 || _this$delegate2.bind(el, binding, vnode, oldVnode);
       }
     }
   };
@@ -5976,28 +5989,28 @@ var DelegateDirective = _createClass(function DelegateDirective() {
     var _this$delegate3;
     if ((_this$delegate3 = _this.delegate) !== null && _this$delegate3 !== void 0 && _this$delegate3.inserted) {
       var _this$delegate4;
-      (_this$delegate4 = _this.delegate) === null || _this$delegate4 === void 0 ? void 0 : _this$delegate4.inserted(el, binding, vnode, oldVnode);
+      (_this$delegate4 = _this.delegate) === null || _this$delegate4 === void 0 || _this$delegate4.inserted(el, binding, vnode, oldVnode);
     }
   };
   this.update = function (el, binding, vnode, oldVnode) {
     var _this$delegate5;
     if ((_this$delegate5 = _this.delegate) !== null && _this$delegate5 !== void 0 && _this$delegate5.update) {
       var _this$delegate6;
-      (_this$delegate6 = _this.delegate) === null || _this$delegate6 === void 0 ? void 0 : _this$delegate6.update(el, binding, vnode, oldVnode);
+      (_this$delegate6 = _this.delegate) === null || _this$delegate6 === void 0 || _this$delegate6.update(el, binding, vnode, oldVnode);
     }
   };
   this.componentUpdated = function (el, binding, vnode, oldVnode) {
     var _this$delegate7;
     if ((_this$delegate7 = _this.delegate) !== null && _this$delegate7 !== void 0 && _this$delegate7.componentUpdated) {
       var _this$delegate8;
-      (_this$delegate8 = _this.delegate) === null || _this$delegate8 === void 0 ? void 0 : _this$delegate8.componentUpdated(el, binding, vnode, oldVnode);
+      (_this$delegate8 = _this.delegate) === null || _this$delegate8 === void 0 || _this$delegate8.componentUpdated(el, binding, vnode, oldVnode);
     }
   };
   this.unbind = function (el, binding, vnode, oldVnode) {
     var _this$delegate9;
     if ((_this$delegate9 = _this.delegate) !== null && _this$delegate9 !== void 0 && _this$delegate9.unbind) {
       var _this$delegate10;
-      (_this$delegate10 = _this.delegate) === null || _this$delegate10 === void 0 ? void 0 : _this$delegate10.unbind(el, binding, vnode, oldVnode);
+      (_this$delegate10 = _this.delegate) === null || _this$delegate10 === void 0 || _this$delegate10.unbind(el, binding, vnode, oldVnode);
     }
     _this.delegate = undefined;
   };

@@ -50,7 +50,7 @@ declare const layoutRenderer: import("vue").DefineComponent<{
     styles: import("..").Styles;
     appliedOptions: import("vue").ComputedRef<any>;
     vuetifyProps: (path: string, defaultProps?: Record<string, any> | undefined) => any;
-}, {}, {}, {}, import("vue/types/v3-component-options").ComponentOptionsMixin, import("vue/types/v3-component-options").ComponentOptionsMixin, {}, string, Readonly<import("vue").ExtractPropTypes<{
+}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, Readonly<import("vue").ExtractPropTypes<{
     schema: {
         required: true;
         type: import("vue").PropType<import("@jsonforms/core").JsonSchema>;

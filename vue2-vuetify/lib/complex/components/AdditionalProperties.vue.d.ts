@@ -190,7 +190,7 @@ declare const _default: import("vue").DefineComponent<{
     i18nKey(key: string): string;
     addProperty(): void;
     removeProperty(propName: string): void;
-}, import("vue/types/v3-component-options").ComponentOptionsMixin, import("vue/types/v3-component-options").ComponentOptionsMixin, {}, string, Readonly<import("vue").ExtractPropTypes<{
+}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, Readonly<import("vue").ExtractPropTypes<{
     input: {
         type: PropType<{
             control: import("vue").ComputedRef<{

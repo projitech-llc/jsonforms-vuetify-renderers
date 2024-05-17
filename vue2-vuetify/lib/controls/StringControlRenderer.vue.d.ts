@@ -72,7 +72,7 @@ declare const controlRenderer: import("vue").DefineComponent<{
     computedLabel: import("vue").ComputedRef<string>;
 }, {}, {
     suggestions(): string[] | undefined;
-}, {}, import("vue/types/v3-component-options").ComponentOptionsMixin, import("vue/types/v3-component-options").ComponentOptionsMixin, {}, string, Readonly<import("vue").ExtractPropTypes<{
+}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, Readonly<import("vue").ExtractPropTypes<{
     schema: {
         required: true;
         type: import("vue").PropType<import("@jsonforms/core").JsonSchema>;
