@@ -1,7 +1,14 @@
 <template>
   <control-wrapper v-bind="controlWrapper" :styles="styles" :isFocused="isFocused" :appliedOptions="appliedOptions">
-    <input :id="control.id + '-input'" :disabled="!control.enabled" type="text" :class="styles.control.input"
-      :value="control.data.join(', ')"></input>
+    <v-hover v-slot="{ hover }">
+      <v-select v-disabled-icon-focus :id="control.id + '-input'" :class="styles.control.input"
+        :disabled="!control.enabled" :autofocus="appliedOptions.focus" :placeholder="appliedOptions.placeholder"
+        :label="computedLabel" :hint="control.description" :persistent-hint="persistentHint()"
+        :required="control.required" :error-messages="control.errors" :clearable="hover" :value="control.data"
+        :items="control.options" :item-text="(item) => t(item.label, item.label)" item-value="value"
+        v-bind="vuetifyProps('v-select')" @change="onChange" @focus="isFocused = true" @blur="isFocused = false"
+        multiple />
+    </v-hover>
   </control-wrapper>
 </template>
 
