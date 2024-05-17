@@ -5040,7 +5040,7 @@ var __vue_render__$d = function __vue_render__() {
             "required": _vm.control.required,
             "error-messages": _vm.control.errors,
             "clearable": hover,
-            "value": _vm.control.data,
+            "value": _vm.control.data ? _vm.control.data : ' ',
             "items": _vm.control.options,
             "item-text": function itemText(item) {
               return _vm.t(item.label, item.label);
