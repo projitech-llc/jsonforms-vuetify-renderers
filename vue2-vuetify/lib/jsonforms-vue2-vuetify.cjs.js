@@ -5048,10 +5048,11 @@ var __vue_render__$d = function __vue_render__() {
     attrs: {
       "id": _vm.control.id + '-input',
       "disabled": !_vm.control.enabled,
-      "label": _vm.computedLabel,
-      "value": "control.data"
+      "label": _vm.computedLabel.replace('*', ''),
+      "value": _vm.control.data ? _vm.control.data.join(',') : ' ',
+      "required": false
     }
-  })], 1);
+  }), _vm._v("\n  " + _vm._s(_vm.control.data.join(',')) + "\n")], 1);
 };
 var __vue_staticRenderFns__$d = [];
 var __vue_inject_styles__$d = undefined;
@@ -5808,7 +5809,7 @@ var __vue_render__$4 = function __vue_render__() {
     attrs: {
       "id": _vm.control.id + '-input',
       "disabled": !_vm.control.enabled,
-      "label": _vm.computedLabel,
+      "label": _vm.computedLabel.replace('*', ''),
       "value": _vm.control.data ? _vm.control.data : ' ',
       "required": false
     }
