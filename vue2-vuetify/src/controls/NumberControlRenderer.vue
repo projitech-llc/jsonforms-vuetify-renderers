@@ -1,31 +1,12 @@
 <template>
-  <control-wrapper
-    v-bind="controlWrapper"
-    :styles="styles"
-    :isFocused="isFocused"
-    :appliedOptions="appliedOptions"
-  >
+  <control-wrapper v-bind="controlWrapper" :styles="styles" :isFocused="isFocused" :appliedOptions="appliedOptions">
     <v-hover v-slot="{ hover }">
-      <v-text-field
-        ref="input"
-        :step="step"
-        :id="control.id + '-input'"
-        :class="styles.control.input"
-        :disabled="!control.enabled"
-        :autofocus="appliedOptions.focus"
-        :placeholder="appliedOptions.placeholder"
-        :label="computedLabel"
-        :hint="control.description"
-        :persistent-hint="persistentHint()"
-        :required="control.required"
-        :error-messages="control.errors"
-        :value="inputValue"
-        :clearable="hover"
-        v-bind="vuetifyProps('v-text-field', { type: 'number' })"
-        @input="onInputChange"
-        @focus="isFocused = true"
-        @blur="isFocused = false"
-      ></v-text-field>
+      <v-text-field ref="input" :step="step" :id="control.id + '-input'" :class="styles.control.input"
+        :disabled="!control.enabled" :autofocus="appliedOptions.focus" :placeholder="appliedOptions.placeholder"
+        :label="computedLabel" :hint="control.description" :persistent-hint="persistentHint()"
+        :required="control.required" :error-messages="control.errors" :value="inputValue ? inputValue : ' '"
+        :clearable="hover" v-bind="vuetifyProps('v-text-field', { type: 'number' })" @input="onInputChange"
+        @focus="isFocused = true" @blur="isFocused = false"></v-text-field>
     </v-hover>
   </control-wrapper>
 </template>

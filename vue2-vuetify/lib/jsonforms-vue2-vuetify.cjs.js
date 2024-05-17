@@ -5382,7 +5382,7 @@ var __vue_render__$a = function __vue_render__() {
             "persistent-hint": _vm.persistentHint(),
             "required": _vm.control.required,
             "error-messages": _vm.control.errors,
-            "value": _vm.inputValue,
+            "value": _vm.inputValue ? _vm.inputValue : ' ',
             "clearable": hover
           },
           on: {
