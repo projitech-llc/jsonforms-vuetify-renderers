@@ -1,7 +1,11 @@
 <template>
   <control-wrapper v-bind="controlWrapper" :styles="styles" :isFocused="isFocused" :appliedOptions="appliedOptions">
-    <v-text-field :id="control.id + '-input'" :class="styles.control.input" :disabled="!control.enabled"
-      :label="computedLabel" :value="control.data" v-bind="vuetifyProps('v-text-field')" />
+    <v-checkbox :id="control.id + '-input'" :class="styles.control.input" :disabled="!control.enabled"
+      :autofocus="appliedOptions.focus" :placeholder="appliedOptions.placeholder" :label="computedLabel"
+      :hint="control.description" :persistent-hint="persistentHint()" :required="control.required"
+      :error-messages="control.errors" :indeterminate="control.data === undefined" :input-value="control.data"
+      :value="control.data ? control.data : false" v-bind="vuetifyProps('v-checkbox')" @change="onChange"
+      @focus="isFocused = true" @blur="isFocused = false" />
   </control-wrapper>
 </template>
 
