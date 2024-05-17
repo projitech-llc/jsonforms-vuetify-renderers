@@ -1,25 +1,7 @@
 <template>
   <control-wrapper v-bind="controlWrapper" :styles="styles" :isFocused="isFocused" :appliedOptions="appliedOptions">
-    <v-hover v-slot="{ hover }">
-      <v-combobox v-if="suggestions !== undefined" v-disabled-icon-focus :id="control.id + '-input'"
-        :class="styles.control.input" :disabled="!control.enabled" :autofocus="appliedOptions.focus"
-        :placeholder="appliedOptions.placeholder" :label="computedLabel" :hint="control.description"
-        :persistent-hint="persistentHint()" :required="control.required" :error-messages="control.errors" :maxlength="appliedOptions.restrict ? control.schema.maxLength : undefined
-    " :counter="control.schema.maxLength !== undefined
-    ? control.schema.maxLength
-    : undefined
-    " :clearable="hover" :value="control.data" :items="suggestions" hide-no-data v-bind="vuetifyProps('v-combobox')"
-        @input="onChange" @focus="isFocused = true" @blur="isFocused = false" />
-      <v-text-field v-else v-disabled-icon-focus :id="control.id + '-input'" :class="styles.control.input"
-        :disabled="!control.enabled" :autofocus="appliedOptions.focus" placeholder="" :label="computedLabel"
-        :hint="control.description" :persistent-hint="persistentHint()" :required="control.required"
-        :error-messages="control.errors" :value="control.data" :maxlength="appliedOptions.restrict ? control.schema.maxLength : undefined
-    " :counter="control.schema.maxLength !== undefined
-    ? control.schema.maxLength
-    : undefined
-    " :clearable="hover" v-bind="vuetifyProps('v-text-field')" @input="onChange" @focus="isFocused = true"
-        @blur="isFocused = false" />
-    </v-hover>
+    <v-text-field v-else v-disabled-icon-focus :id="control.id + '-input'" :class="styles.control.input"
+      :disabled="!control.enabled" :label="computedLabel" :value="control.data" v-bind="vuetifyProps('v-text-field')" />
   </control-wrapper>
 </template>
 

@@ -3687,32 +3687,7 @@ var __vue_render__$h = function __vue_render__() {
       "isFocused": _vm.isFocused,
       "appliedOptions": _vm.appliedOptions
     }
-  }, 'control-wrapper', _vm.controlWrapper, false), [_c('v-checkbox', _vm._b({
-    "class": _vm.styles.control.input,
-    attrs: {
-      "id": _vm.control.id + '-input',
-      "disabled": !_vm.control.enabled,
-      "autofocus": _vm.appliedOptions.focus,
-      "placeholder": _vm.appliedOptions.placeholder,
-      "label": _vm.computedLabel,
-      "hint": _vm.control.description,
-      "persistent-hint": _vm.persistentHint(),
-      "required": _vm.control.required,
-      "error-messages": _vm.control.errors,
-      "indeterminate": _vm.control.data === undefined,
-      "input-value": _vm.control.data,
-      "value": _vm.control.data ? _vm.control.data : false
-    },
-    on: {
-      "change": _vm.onChange,
-      "focus": function focus($event) {
-        _vm.isFocused = true;
-      },
-      "blur": function blur($event) {
-        _vm.isFocused = false;
-      }
-    }
-  }, 'v-checkbox', _vm.vuetifyProps('v-checkbox'), false))], 1);
+  }, 'control-wrapper', _vm.controlWrapper, false));
 };
 var __vue_staticRenderFns__$h = [];
 var __vue_inject_styles__$h = undefined;
@@ -5805,77 +5780,7 @@ var __vue_render__$4 = function __vue_render__() {
       "isFocused": _vm.isFocused,
       "appliedOptions": _vm.appliedOptions
     }
-  }, 'control-wrapper', _vm.controlWrapper, false), [_c('v-hover', {
-    scopedSlots: _vm._u([{
-      key: "default",
-      fn: function fn(ref) {
-        var hover = ref.hover;
-        return [_vm.suggestions !== undefined ? _c('v-combobox', _vm._b({
-          directives: [{
-            name: "disabled-icon-focus",
-            rawName: "v-disabled-icon-focus"
-          }],
-          "class": _vm.styles.control.input,
-          attrs: {
-            "id": _vm.control.id + '-input',
-            "disabled": !_vm.control.enabled,
-            "autofocus": _vm.appliedOptions.focus,
-            "placeholder": _vm.appliedOptions.placeholder,
-            "label": _vm.computedLabel,
-            "hint": _vm.control.description,
-            "persistent-hint": _vm.persistentHint(),
-            "required": _vm.control.required,
-            "error-messages": _vm.control.errors,
-            "maxlength": _vm.appliedOptions.restrict ? _vm.control.schema.maxLength : undefined,
-            "counter": _vm.control.schema.maxLength !== undefined ? _vm.control.schema.maxLength : undefined,
-            "clearable": hover,
-            "value": _vm.control.data,
-            "items": _vm.suggestions,
-            "hide-no-data": ""
-          },
-          on: {
-            "input": _vm.onChange,
-            "focus": function focus($event) {
-              _vm.isFocused = true;
-            },
-            "blur": function blur($event) {
-              _vm.isFocused = false;
-            }
-          }
-        }, 'v-combobox', _vm.vuetifyProps('v-combobox'), false)) : _c('v-text-field', _vm._b({
-          directives: [{
-            name: "disabled-icon-focus",
-            rawName: "v-disabled-icon-focus"
-          }],
-          "class": _vm.styles.control.input,
-          attrs: {
-            "id": _vm.control.id + '-input',
-            "disabled": !_vm.control.enabled,
-            "autofocus": _vm.appliedOptions.focus,
-            "placeholder": "",
-            "label": _vm.computedLabel,
-            "hint": _vm.control.description,
-            "persistent-hint": _vm.persistentHint(),
-            "required": _vm.control.required,
-            "error-messages": _vm.control.errors,
-            "value": _vm.control.data,
-            "maxlength": _vm.appliedOptions.restrict ? _vm.control.schema.maxLength : undefined,
-            "counter": _vm.control.schema.maxLength !== undefined ? _vm.control.schema.maxLength : undefined,
-            "clearable": hover
-          },
-          on: {
-            "input": _vm.onChange,
-            "focus": function focus($event) {
-              _vm.isFocused = true;
-            },
-            "blur": function blur($event) {
-              _vm.isFocused = false;
-            }
-          }
-        }, 'v-text-field', _vm.vuetifyProps('v-text-field'), false))];
-      }
-    }])
-  })], 1);
+  }, 'control-wrapper', _vm.controlWrapper, false));
 };
 var __vue_staticRenderFns__$4 = [];
 var __vue_inject_styles__$4 = undefined;
