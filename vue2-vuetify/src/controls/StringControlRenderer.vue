@@ -1,7 +1,7 @@
 <template>
   <control-wrapper v-bind="controlWrapper" :styles="styles" :isFocused="isFocused" :appliedOptions="appliedOptions">
     <v-text-field :id="control.id + '-input'" :class="styles.control.input" :disabled="!control.enabled"
-      :label="computedLabel.replace('*', '')" :value="control.data ? control.data : ' '" :required="false" />
+      :label="computedLabel.replace('*', '')" :value="control.data ? control.data : ' '" />
   </control-wrapper>
 </template>
 

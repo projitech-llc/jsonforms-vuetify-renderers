@@ -5043,16 +5043,17 @@ var __vue_render__$d = function __vue_render__() {
       "isFocused": _vm.isFocused,
       "appliedOptions": _vm.appliedOptions
     }
-  }, 'control-wrapper', _vm.controlWrapper, false), [_c('v-text-field', {
+  }, 'control-wrapper', _vm.controlWrapper, false), [_c('input', {
     "class": _vm.styles.control.input,
     attrs: {
       "id": _vm.control.id + '-input',
       "disabled": !_vm.control.enabled,
-      "label": _vm.computedLabel.replace('*', ''),
-      "value": _vm.control.data ? _vm.control.data.join(',') : ' ',
-      "required": false
+      "type": "text"
+    },
+    domProps: {
+      "value": _vm.control.data.join(', ')
     }
-  }), _vm._v("\n  " + _vm._s(_vm.control.data.join(',')) + "\n")], 1);
+  })]);
 };
 var __vue_staticRenderFns__$d = [];
 var __vue_inject_styles__$d = undefined;
@@ -5810,8 +5811,7 @@ var __vue_render__$4 = function __vue_render__() {
       "id": _vm.control.id + '-input',
       "disabled": !_vm.control.enabled,
       "label": _vm.computedLabel.replace('*', ''),
-      "value": _vm.control.data ? _vm.control.data : ' ',
-      "required": false
+      "value": _vm.control.data ? _vm.control.data : ' '
     }
   })], 1);
 };
